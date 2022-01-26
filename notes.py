@@ -134,3 +134,6 @@ import math
 #     name = input("what is your name?: ")
 
 # for loop ------
+
+for i in range(10):
+    print(i)
