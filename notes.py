@@ -1,4 +1,5 @@
 import math
+import time
 
 # variables ------
 
@@ -133,7 +134,55 @@ import math
 # while len(name) == 0:
 #     name = input("what is your name?: ")
 
-# for loop ------
+# for loops ------
 
-for i in range(10):
-    print(i)
+# for i in range(10):
+#     print(i)                    # print 0-9
+
+# for i in range(50, 100):
+#     print(i)                    # print 50-99
+
+# for letter in "gamer":
+#     print(letter)
+
+# for seconds in range(10, 0, -1):# start at 10, go to 0, second -1 each time
+#     print(seconds)
+#     time.sleep(1)
+# print("happy new year")
+
+# nested loops ------
+
+# rows = int(input("how many rows?: "))
+# columns = int(input("how many columns?: "))
+# symbol = input("symbol to use?: ")
+
+# for i in range(rows):
+#     for j in range(columns):
+#         print(symbol, end="")         # end="" prevent line down
+#     print()                           # line down
+
+# loop control statements ------
+
+# break = terminate loop
+# continue = skip to next iteration of loop
+# pass = nothing, placeholder
+
+# while True:
+#     name = input("Enter your name: ")
+#     if name != "":
+#         break
+
+# phone_number = "123-456-7890"
+
+# for i in phone_number:
+#     if i == "-":
+#         continue
+#     print(i, end="")
+
+# for i in range(1, 21):
+#     if i == 13:                     # doesnt print 13
+#         pass
+#     else:
+#         print(i)
+
+# lists ------
