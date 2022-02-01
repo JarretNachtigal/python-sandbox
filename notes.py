@@ -1,4 +1,5 @@
 import math
+from mimetypes import init
 import time
 
 # variables ------
@@ -186,3 +187,71 @@ import time
 #         print(i)
 
 # lists ------
+
+# calculator ------
+
+class Calculator:
+    def __init__(self):
+        # this is used to hold the value of the previous operation
+        self.current_num = 0.0
+
+    def add(self, num):
+        self.current_num += num
+        return self.current_num
+
+    def subtract(self, num):
+        self.current_num -= num
+        return self.current_num
+
+    def multiply(self, num):
+        self.current_num *= num
+        return self.current_num
+
+    def divide(self, num):
+        # prevent attempt to divide by 0
+        if self.current_num == 0:
+            print("cannot divide by zero")
+            return self.current_num
+        self.current_num /= num
+        return self.current_num
+
+
+calc_instance = Calculator()  # Calculator instance
+calc_continue = True  # loop continue/end
+
+# helper method for number input
+
+
+def get_input():
+    num = float(input("number: "))
+    return num
+
+
+# while loop -- continue until 'end' is given as input by the user
+# single operation per pass through
+# option to reverse - Calculator.current_num can be used as first or second number (matters for subtraction and division)
+calc_instance.current_num = float(input("number: "))
+while calc_continue:
+    # get operation from user
+    operation = input("choose an operation: ")
+    if operation == "end":
+        calc_continue = False
+
+    elif operation == "add":
+        num = get_input()
+        print("current number: ", calc_instance.add(num))
+
+    elif operation == "subtract":
+        num = get_input()
+        print("current number: ", calc_instance.subtract(num))
+
+    elif operation == "multiply":
+        num = get_input()
+        print("current number: ", calc_instance.multiply(num))
+
+    elif operation == "divide":
+        num = get_input()
+        print("current number: ", calc_instance.divide(num))
+
+    else:
+        pass
