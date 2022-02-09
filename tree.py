@@ -1,7 +1,3 @@
-from platform import node
-from tkinter.tix import Tree
-
-
 class TreeNode:
     def __init__(self, value=None, left=None, right=None) -> None:
         self.value = value
@@ -96,9 +92,11 @@ tree.insert(6, tree.head)
 tree.insert(2, tree.head)
 tree.insert(4, tree.head)
 tree.insert(9, tree.head)
-print(tree.print_tree(tree.head))
+tree.print_tree(tree.head)
 tree.delete(4, tree.head)
-print(tree.print_tree(tree.head))
+tree.delete(2, tree.head)
+tree.delete(9, tree.head)
+tree.print_tree(tree.head)
 # test node, works
 # treeNode = TreeNode(1)
 # treeNodeTwo = TreeNode(2)
