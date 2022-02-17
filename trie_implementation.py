@@ -29,6 +29,7 @@ class Trie:
             else:
                 # we are still in the middle of a word
                 # recursively call this function on the child node
+                # child node, concatenate word, memoize words
                 self.printWords(childNode, word + key, words)
         return words
 
