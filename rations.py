@@ -1,4 +1,5 @@
 # hackerrank
+# ----- BROKEN -----
 def fairRations(B):
     # impossible
     if len(B) <= 2:
@@ -6,17 +7,10 @@ def fairRations(B):
     i = 0
     loaves_given = 0
     while i < len(B) - 1:
-        if not B[i] % 2 == 0:  # if current is odd
-            if not B[i-1] % 2 == 0:  # if left is odd
-                B[i] += 1
-                B[i-1] += 1
-                loaves_given += 2
-            elif B[i-1] % 2 == 0:  # if left is even
-                B[i] += 1
-                B[i+1] += 1
-                loaves_given += 2
-        else:  # current is even
-            pass
+        if B[i] % 2 == 1:  # if current is odd
+            B[i] += 1
+            B[i+1] += 1
+            loaves_given += 2
         i += 1
 
     if not all(element % 2 == 0 for element in B):
