@@ -30,3 +30,5 @@ def binary_search(arr, num):
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 num = 11
 print(binary_search(arr, num))
+
+print("abcd" > "abdc")
