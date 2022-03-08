@@ -55,6 +55,7 @@ def climbingLeaderboard(ranked, player):
     return player_leaderboard
 
 
+# o(n log n)?
 def climbingLeaderboardTwo(ranked, player):
     debug = True  # debug prints if true
     player_leaderboard = []  # new array to return
@@ -68,6 +69,7 @@ def climbingLeaderboardTwo(ranked, player):
     return player_leaderboard
 
 
+# o(log n)
 def binary_search(arr, item):
     begin_index = 0
     end_index = len(arr) - 1
