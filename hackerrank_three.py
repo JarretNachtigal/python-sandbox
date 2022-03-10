@@ -211,7 +211,6 @@ print(queensAttack(n, k, r_q, c_q, obstacles))
 # diagonal => 6
 # output => 10
 
-# runtime error
 n = 4
 k = 0
 r_q = 4
