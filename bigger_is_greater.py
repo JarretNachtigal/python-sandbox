@@ -61,7 +61,8 @@ def bigger_is_greater_three(w):
             w[min_index], w[i-1] = w[i-1], w[min_index]  # swap
             # print("before sort", w)
             # sort
-            temp = sorted(w[i: length+1])
+            temp = w[i+1:][::-1]
+            # temp = sorted(w[i: length+1])
             w[i:length+1] = temp
             # print("after sort", w)
             # print("about to return")
@@ -90,8 +91,8 @@ def bigger_is_greater_four(w):
 
         w[i], w[j] = w[j], w[i]
         # sort numbers after i (to the right of the small left char index)
-        result = w[:i+1] + w[i+1:][::-1]
         w = "".join(w)
+        result = w[:i+1] + w[i+1:][::-1]  # [w from i+1 inclusive], [reversed]
     return result
     # dkhc
     # else, i=d j=c(last char)
@@ -129,7 +130,7 @@ their_ans = readFile("bigger_ans.txt")
 for s in big_fucking_test:
     ans.append(bigger_is_greater_four(s))
 
-# difference(ans, their_ans, big_fucking_test)
+difference(ans, their_ans, big_fucking_test)
 # ans = bigger_is_greater_four("dkhc")
 # print(ans)
 # their_ans =
