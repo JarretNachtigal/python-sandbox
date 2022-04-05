@@ -37,30 +37,30 @@ while list1[-i] == list1[-1]:
     i += 1
 print(list1[-i])  # print runner up / second highest score
 
-# third hackerrank problem - might not run due to input()
+# third hackerrank problem - broken
 
-# scores = {}
-# lowest_score = 9223372036854775807
-# second_lowest_score = 9223372036854775807
-# for _ in range(int(input())):
-#     name = input()
-#     score = float(input())
-#     # given names and grades
-#     # print names of students with second lowest grade
+scores = []
+lowest_score = 9223372036854775807
+second_lowest_score = 9223372036854775807
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    # given names and grades
+    # print names of students with second lowest grade
 
-#     # add each student to dict
-#     scores[name] = score
-#     # keep track of lowest and second lowest
-#     # if score is lower than second lowest, check lowest
-#     if second_lowest_score > score or lowest_score == None:
-#         # if score is lowest, shift
-#         if lowest_score > score:
-#             second_lowest_score = lowest_score
-#             lowest_score = score
-#         # if score is second lowest, replace
-#         else:
-#             second_lowest_score = score
-# list1 = [name for name, score in scores.items() if score == second_lowest_score]
-# list1.sort() # for the hackerrank answers - alphabetical
-# for name in list1:
-#     print(name)
+    # add each student to dict
+    scores.append([name, score])
+    # keep track of lowest and second lowest
+    # if score is lower than second lowest, check lowest, don't double up on lowest
+    if second_lowest_score > score and score != lowest_score:
+        # if score is lowest, shift
+        if lowest_score > score:
+            second_lowest_score = lowest_score
+            lowest_score = score
+        # if score is second lowest, replace
+        else:
+            second_lowest_score = score
+list1 = [name for name, score in scores if score == second_lowest_score]
+list1.sort()  # for the hackerrank answers
+for name in list1:
+    print(name)
