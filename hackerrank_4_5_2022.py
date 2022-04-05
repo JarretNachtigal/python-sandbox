@@ -24,3 +24,15 @@ n = 3
 possible_coordinates = [[i, j, k] for i in range(
     x+1) for j in range(y+1) for k in range(z+1) if i+j+k != n]
 print(possible_coordinates)
+
+# hackerrank problem 2 - find runner up
+arr = [2, 3, 6, 6, 5]
+# create list
+list1 = list(arr)
+# sort list
+list1.sort()
+i = 2
+# walk backwards through list until second highest score is found
+while list1[-i] == list1[-1]:
+    i += 1
+print(list1[-i])  # print runner up / second highest score
