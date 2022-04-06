@@ -62,5 +62,6 @@ for _ in range(int(input())):
             second_lowest_score = score
 list1 = [name for name, score in scores if score == second_lowest_score]
 list1.sort()  # for the hackerrank answers
+# print list of socond lowest score names
 for name in list1:
     print(name)
