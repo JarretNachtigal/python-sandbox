@@ -22,3 +22,10 @@
 #     print("{:.2f}".format(average))
 # else:  # query not valid
 #     print("none")
+
+
+# NOTES
+# - string formatting (using a variable in this case
+# average = 3.14159
+# print("{:.2f}".format(average))
+# => 3.14
