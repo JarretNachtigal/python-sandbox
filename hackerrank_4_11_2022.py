@@ -41,6 +41,24 @@
 #     except ValueError as e: # will occur when int(input(--invalid--))
 #         print("Error Code:", e)
 
+# ------------------------------------------------------------
+
+# 3 - Python/Errors and Exceptions/Incorrect Regex
+
+# take input through stdin
+
+# import re # regex library?
+# num = int(input()) # first input, int, num inputs
+# # loop through input
+# for _ in range(num):
+#     # if input valid regex, output True
+#     try:
+#         re.compile(input()) # check regex validity
+#         print("True")
+#     # else, output false
+#     except:
+#         print("False")
+
 # NOTES
 # - string formatting (using a variable in this case
 # average = 3.14159
@@ -49,3 +67,6 @@
 
 # integer division
 # a//b => integer/floor division
+
+# Exceptions defined one at a time after try
+# can use else or finally afterwards
