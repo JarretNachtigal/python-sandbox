@@ -23,9 +23,29 @@
 # else:  # query not valid
 #     print("none")
 
+# ------------------------------------------------
+
+# 2 - Python/Errors and Exceptions/Exceptions
+
+# feed input through stdin
+
+# num_test_cases = int(input()) # number of inputs / loop constraint
+# # loop
+# for _ in range(num_test_cases):
+#     try:
+#         nums = input().split(" ") # get input as list
+#         a, b = int(nums[0]), int(nums[1]) # set varibles from input list
+#         print(a//b) # attempt integer division
+#     except ZeroDivisionError as e: # will occur when b == 0
+#         print("Error Code:", e)
+#     except ValueError as e: # will occur when int(input(--invalid--))
+#         print("Error Code:", e)
 
 # NOTES
 # - string formatting (using a variable in this case
 # average = 3.14159
 # print("{:.2f}".format(average))
 # => 3.14
+
+# integer division
+# a//b => integer/floor division
