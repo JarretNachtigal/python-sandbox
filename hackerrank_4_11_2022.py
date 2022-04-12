@@ -60,7 +60,7 @@
 #         print("False")
 
 # NOTES
-# - string formatting (using a variable in this case
+# - string formatting (using a variable in this case)
 # average = 3.14159
 # print("{:.2f}".format(average))
 # => 3.14
