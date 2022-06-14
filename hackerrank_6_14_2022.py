@@ -11,6 +11,21 @@
 
 # print(split_and_join(input))
 
-# 2 ------ What's your name? ------
+# 2 ------ The Minion Game ------
 
 input = input()
+
+
+def minion_hame(string):
+    # kevin - starts with vowels
+    # stuart - starts with consonants
+
+    # find string index of all vowels
+
+    # find substrings starting with each vowel
+    # (only one instance of each vowel)
+
+    # compare each subtring with string S and give points
+
+    # 1 point per substring instance
+    return 0
