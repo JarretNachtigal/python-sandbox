@@ -19,15 +19,14 @@
 # kevin - starts with vowels
 # stuart - starts with consonants
 def minion_game(string):
+    # ignore uppercase
     string = string.lower()
-    vowels = {"a": False, "e": False, "i": False, "o": False,
-              "u": False}  # False - not used, string index - used
 
     # determine winner and return, default stuart
-    stuart_score = get_stuart_score(string, vowels)
+    stuart_score = get_stuart_score(string)
     winner_score = stuart_score
     winner = "Stuart"
-    kevin_score = get_kevin_score(string, vowels)
+    kevin_score = get_kevin_score(string)
     # swap winner if needed
     if stuart_score < kevin_score:
         winner = "Kevin"
@@ -38,18 +37,23 @@ def minion_game(string):
 
 # this method will be used to find Kevin's score
 # this method will find all substring's of a given input string that start with vowels, nonrepeating
-def get_vowel_substrings(string, vowels):
-    used_vowels = []
-    for index, letter in enumerate(string):
-        # if letter is a vowel and is the first instance of that vowel
-        if letter in vowels and vowels[letter] == False:
-            vowels[letter] = index  # save index of first instace of each value
-            used_vowels.append(letter)
+def get_vowel_substrings(string):
+    vowels = ["a", "e", "i", "o", 'u']
+    substrings = []
+    length = len(string)
+    for letter in vowels:  # loop through vowels to check if they exist
+        if string.count(letter) > 0:  # if they exist
+            substrings.append(letter)  # add vowel to substrings
+            i = string.index(letter) + 1  # set i to index of vowel + 1
+            while i < length:  # add remaining substrings after the vowel
+                # add previous substring + next letter
+                substrings.append(substrings[len(substrings) - 1] + string[i])
+                i += 1
+
+    return substrings
 
 
-# this method will be used to find Stuart's score
-# this method will find all substring's of a given input string that start with consonants, nonrepeating
-def get_consonants_substrings(string, vowels, used_vowels):
+def get_consonants_substrings(string):
     pass
 
 
@@ -63,4 +67,5 @@ def get_kevin_score(string):
     pass
 
 
-print(minion_game("banana"))
+# print(minion_game("banana"))
+print(get_vowel_substrings("banana"))
