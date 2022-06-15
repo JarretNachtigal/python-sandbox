@@ -53,8 +53,21 @@ def get_vowel_substrings(string):
     return substrings
 
 
-def get_consonants_substrings(string):
-    pass
+def get_consonant_substrings(string):
+    consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm',
+                  'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+    substrings = []
+    length = len(string)
+    for letter in consonants:  # loop through vowels to check if they exist
+        if string.count(letter) > 0:  # if they exist
+            substrings.append(letter)  # add vowel to substrings
+            i = string.index(letter) + 1  # set i to index of vowel + 1
+            while i < length:  # add remaining substrings after the vowel
+                # add previous substring + next letter
+                substrings.append(substrings[len(substrings) - 1] + string[i])
+                i += 1
+
+    return substrings
 
 
 # beginning with consonant
@@ -69,3 +82,4 @@ def get_kevin_score(string):
 
 # print(minion_game("banana"))
 print(get_vowel_substrings("banana"))
+print(get_consonant_substrings("banana"))
