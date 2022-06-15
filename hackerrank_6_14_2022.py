@@ -72,14 +72,24 @@ def get_consonant_substrings(string):
 
 # beginning with consonant
 def get_stuart_score(string):
-    pass
+    substrings = get_consonant_substrings(string)
+    score = 0
+    for substring in substrings:
+        score += string.count(substring)
+
+    return score
 
 
 # beginning with vowel
 def get_kevin_score(string):
-    pass
+    substrings = get_vowel_substrings(string)
+    score = 0
+    for substring in substrings:
+        score += string.count(substring)
+
+    return score
 
 
-# print(minion_game("banana"))
-print(get_vowel_substrings("banana"))
-print(get_consonant_substrings("banana"))
+# print(get_vowel_substrings("banana"))
+# print(get_consonant_substrings("banana"))
+print(minion_game("banana"))
