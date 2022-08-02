@@ -18,7 +18,7 @@ class TestObject:
     def get_data(self):
         return self.data
 
-    def set_data(self, data):
+    def set_data(self, data) -> None:
         self.data = data
 
 
@@ -29,7 +29,7 @@ class ContainerObject:
     def get_data(self):
         return self.data.get_data()
 
-    def set_data(self, data: TestObject):
+    def set_data(self, data: TestObject) -> None:
         self.data.set_data(data)
 
 
