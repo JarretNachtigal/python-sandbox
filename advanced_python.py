@@ -16,3 +16,7 @@ print(long_empty_list)
 mylist = [1, 2, 3, 4, 5]
 b = [i*i for i in mylist]
 # [expression, for _ in _]
+
+# list vs tuple
+# creation speed, incrementation speed, size - tuple is better
+# tuple is immutable
