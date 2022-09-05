@@ -7,3 +7,7 @@ if "thing" in list_of_things:
     print("yes")
 else:
     print("no")
+
+long_empty_list = [0] * 10
+# long_empty_list = [] * 10  # this wont work with empty list
+print(long_empty_list)
