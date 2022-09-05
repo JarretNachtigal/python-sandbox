@@ -15,3 +15,4 @@ print(long_empty_list)
 # copy and square a list
 mylist = [1, 2, 3, 4, 5]
 b = [i*i for i in mylist]
+# [expression, for _ in _]
