@@ -11,3 +11,7 @@ else:
 long_empty_list = [0] * 10
 # long_empty_list = [] * 10  # this wont work with empty list
 print(long_empty_list)
+
+# copy and square a list
+mylist = [1, 2, 3, 4, 5]
+b = [i*i for i in mylist]
